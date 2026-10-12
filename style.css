@@ -1,255 +1,277 @@
-/* --- 1. RESET & BIẾN MÀU (CSS VARIABLES) --- */
+/* --- BIẾN VÀ CẤU HÌNH CHUNG --- */
+:root {
+    --primary-color: #0f172a; /* Xanh than lịch sử, trang trọng */
+    --accent-color: #d97706;  /* Vàng đồng / Ánh sáng hy vọng */
+    --bg-color: #f8fafc;      /* Trắng ngà nhạt */
+    --text-color: #334155;    /* Xám đậm dễ đọc */
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --bg-dark: #121824;
-    --bg-card: rgba(30, 41, 59, 0.75);
-    --gold: #D4AF37;
-    --gold-light: #E5A93C;
-    --text-main: #E2E8F0;
-    --text-muted: #94A3B8;
-    --border-color: rgba(212, 175, 55, 0.3);
-}
-
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
+    font-family: 'Inter', sans-serif, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Merriweather', serif;
-    color: var(--gold);
-}
-
-/* --- 2. THANH MENU CHUNG (GLOBAL NAVIGATION BAR) --- */
+/* --- THANH MENU CHUNG --- */
 header {
+    background-color: var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(18, 24, 36, 0.9);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 1rem 2rem;
 }
 
 .logo {
-    font-size: 1.2rem;
+    color: var(--white);
+    font-size: 1.25rem;
     font-weight: bold;
-    color: var(--gold);
     text-decoration: none;
-    font-family: 'Merriweather', serif;
+    letter-spacing: 0.5px;
 }
 
-nav ul {
-    display: flex;
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
     list-style: none;
-    gap: 15px;
+    display: flex;
+    gap: 0.75rem;
     flex-wrap: wrap;
 }
 
-nav ul li a {
-    color: var(--text-main);
+.nav-links a {
+    color: var(--white);
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 500;
-    padding: 6px 12px;
+    padding: 0.5rem 0.75rem;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
-nav ul li a:hover, nav ul li a.active {
-    background: var(--gold);
-    color: var(--bg-dark);
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--accent-color);
+    color: var(--white);
 }
 
-/* --- 3. BỐ CỤC CHUNG (CONTAINER & MAIN) --- */
+/* --- KHUNG NỘI DUNG CHÍNH --- */
 main {
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    min-height: 70vh;
+    margin: 2.5rem auto;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding-bottom: 3rem;
 }
 
-.section-title {
-    text-align: center;
+h1 {
+    color: var(--primary-color);
     font-size: 2.2rem;
-    margin-bottom: 30px;
-    position: relative;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
 }
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--gold);
-    margin: 10px auto 0;
-    border-radius: 2px;
+h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-/* --- 4. CÁC THÀNH PHẦN ĐẶC THÙ (CARDS, TIMELINE, GALLERY, TABLE) --- */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- HIỆU ỨNG THẺ (CARD GRID) --- */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .card {
-    background: var(--bg-card);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: var(--transition);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-    border-color: var(--gold);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
 }
 
-/* Timeline CSS */
+/* --- DÒNG THỜI GIAN (TIMELINE) --- */
 .timeline {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background: var(--gold);
-    transform: translateX(-50%);
+    margin: 2rem 0;
+    padding-left: 2rem;
+    border-left: 3px solid var(--accent-color);
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    margin-bottom: 2rem;
     position: relative;
-    width: 50%;
 }
 
-.timeline-item:nth-child(odd) { left: 0; text-align: right; }
-.timeline-item:nth-child(even) { left: 50%; text-align: left; }
-
-.timeline-content {
-    background: var(--bg-card);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.38rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 2px solid var(--accent-color);
 }
 
-/* Gallery CSS */
+.timeline-date {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+}
+
+/* --- THƯ VIỆN ẢNH (GALLERY) --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .gallery-item {
-    overflow: hidden;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
-    height: 180px;
+    text-align: center;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
+    height: 160px;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    border-radius: 6px;
+    transition: var(--transition);
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
+.gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* Table CSS */
+.gallery-caption {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* --- BẢNG BIỂU --- */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background: var(--bg-card);
-    border-radius: 8px;
-    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+table, th, td {
+    border: 1px solid #cbd5e1;
 }
 
 th, td {
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
     text-align: left;
 }
 
 th {
-    background: rgba(212, 175, 55, 0.15);
-    color: var(--gold);
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
-/* --- 5. NÚT ĐIỀU KHIỂN NHẠC NỀN --- */
-.bg-music-container {
+tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* --- TRÌNH PHÁT NHẠC NỀN GÓC MÀN HÌNH --- */
+.audio-widget {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
-    background: rgba(30, 41, 59, 0.85);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    border-radius: 50px;
-    padding: 8px 16px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 14px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    z-index: 9999;
+    font-size: 0.85rem;
 }
 
-.bg-music-container:hover {
-    border-color: #D4AF37;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+.audio-widget audio {
+    height: 30px;
+    width: 180px;
 }
 
-.bg-music-btn {
-    background: none;
-    border: none;
-    color: #D4AF37;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-}
-
-/* --- 6. FOOTER & RESPONSIVE --- */
+/* --- CHÂN TRANG --- */
 footer {
     text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-top: 50px;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 3rem;
+    font-size: 0.9rem;
 }
 
+/* --- RESPONSIVE CHO DI ĐỘNG --- */
 @media (max-width: 768px) {
-    header { flex-direction: column; gap: 10px; }
-    nav ul { justify-content: center; }
-    .timeline::before { left: 20px; }
-    .timeline-item { width: 100%; padding-left: 50px; text-align: left !important; }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        justify-content: center;
+    }
+    .audio-widget {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        justify-content: center;
+    }
 }
