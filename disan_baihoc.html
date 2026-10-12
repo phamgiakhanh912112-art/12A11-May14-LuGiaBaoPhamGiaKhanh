@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Di sản và Bài học – Martin Luther King Jr.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cuocdoi.html">Cuộc đời</a></li>
+                <li><a href="hanhtrinh.html">Hành trình</a></li>
+                <li><a href="thanhtuu.html">Thành tựu</a></li>
+                <li><a href="thuthach.html">Thử thách</a></li>
+                <li><a href="tacdong.html">Tác động</a></li>
+                <li><a href="disan_baihoc.html" class="active">Di sản & Bài học</a></li>
+                <li><a href="thuvien_nguon.html">Thư viện & Nguồn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-title">Di sản và Cảm nhận cá nhân</h1>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Di sản để lại</h3>
+                <p>Ngày lễ Martin Luther King Jr. Day được tổ chức thường niên tại Mỹ để tưởng nhớ giá trị về hòa bình, sự bình đẳng và tình đoàn kết nhân loại.</p>
+            </div>
+            <div class="card">
+                <h3>Cảm nhận từ thành viên nhóm</h3>
+                <p><strong>Thành viên 1:</strong> Ấn tượng nhất với tinh thần dũng cảm và cách ông dùng tri thức, ngôn từ nhân văn để thay đổi định kiến xã hội.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 Dự án Tin học 12</footer>
+    <div class="bg-music-container">
+        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
+        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    </div>
+    <script>
+        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
+        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
+        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
+    </script>
+</body>
+</html>
