@@ -2,15 +2,15 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Thử thách và Thất bại – Martin Luther King Jr.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phía sau thành công của Sir Nicholas Winton</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
         <nav>
-            <ul>
+            <a href="index.html" class="logo">NICHOLAS <span>WINTON</span></a>
+            <ul class="nav-links">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="cuocdoi.html">Cuộc đời</a></li>
                 <li><a href="hanhtrinh.html">Hành trình</a></li>
@@ -24,28 +24,37 @@
     </header>
 
     <main>
-        <h1 class="section-title">Phía sau thành công: Thử thách và Trở ngại</h1>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Sự đe dọa & Bạo lực</h3>
-                <p>Nhà riêng từng bị đánh bom, bản thân ông bị bắt giam nhiều lần và đối mặt với các đe dọa ám sát liên tục từ các tổ chức cực đoan.</p>
-            </div>
-            <div class="card">
-                <h3>Góc nhìn nhận xét của nhóm</h3>
-                <p>Ông không phải là người hoàn hảo tuyệt đối, nhưng nghị lực phi thường và lòng can đảm vượt qua hiểm nguy đã biến ông thành nhà lãnh đạo huyền thoại.</p>
-            </div>
-        </div>
+        <h1>Phía sau thành công của Sir Nicholas Winton</h1>
+
+        <h2>Các khó khăn và trở ngại</h2>
+        <ul>
+            <li><strong>Thủ tục hành chính và tài chính:</strong> Chính phủ Anh đòi hỏi khoản tiền bảo chứng £50 cho mỗi đứa trẻ (khoảng tiền rất lớn thời đó) và visa duyệt rất chậm.</li>
+            <li><strong>Sự hoài nghi:</strong> Nhiều tổ chức cho rằng công việc của ông là "bất khả thi" vì số lượng trẻ em quá lớn và thời gian quá gấp rút.</li>
+            <li><strong>Sự cản trở của Đức Quốc Xã:</strong> Các cuộc kiểm tra, sách nhiễu trên các chuyến tàu đi qua lãnh thổ do Đức kiểm soát.</li>
+        </ul>
+
+        <h2>Thất bại đau đớn nhất</h2>
+        <p>Chuyến tàu ngày 01/09/1939 chở 250 trẻ em bị hủy bỏ do chiến tranh bùng nổ. Hầu hết các em sau đó đã hy sinh trong các trại tập trung.</p>
+
+        <h2>Những tranh luận / Hạn chế</h2>
+        <p>Khi câu chuyện được phát sóng năm 1988, truyền thông gọi ông là "Oskar Schindler của nước Anh". Tuy nhiên, ông khiêm tốn bác bỏ và khẳng định ông không gặp nguy hiểm đến tính mạng như Schindler vì ông làm việc chủ yếu tại London.</p>
+        <p>Ông luôn nhấn mạnh rằng thành công này còn nhờ sự đóng góp của các cộng sự tại Praha như Trevor Chadwick và Doreen Warriner.</p>
+
+        <h2>Nhận xét riêng của nhóm</h2>
+        <blockquote style="margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--accent-color); background: #f1f5f9;">
+            <em>"Điều giúp Sir Nicholas Winton kiên trì tiến về phía trước chính là tinh thần trách nhiệm cá nhân đối với sự sống của con người. Ông không đợi chính phủ hay các tổ chức hành động, mà tự mình chủ động tìm giải pháp cho từng trở ngại. Sự kiên trì và niềm tin 'mọi rào cản đều có thể tháo gỡ' đã giúp ông vượt qua tất cả."</em>
+        </blockquote>
     </main>
 
-    <footer>&copy; 2026 Dự án Tin học 12</footer>
-    <div class="bg-music-container">
-        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
-        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    <div class="audio-widget">
+        <span>🎵 Nhạc nền:</span>
+        <audio controls loop>
+            <source src="juraganvisi-light-whimsical-instrumental-with-playful-rhythms-v2-404307.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <script>
-        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
-        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
-        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
-    </script>
+
+    <footer>
+        <p>Những con người làm thay đổi thế giới</p>
+    </footer>
 </body>
 </html>
