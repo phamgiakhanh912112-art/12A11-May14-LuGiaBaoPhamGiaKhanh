@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hành trình và Bước ngoặt – Martin Luther King Jr.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cuocdoi.html">Cuộc đời</a></li>
+                <li><a href="hanhtrinh.html" class="active">Hành trình</a></li>
+                <li><a href="thanhtuu.html">Thành tựu</a></li>
+                <li><a href="thuthach.html">Thử thách</a></li>
+                <li><a href="tacdong.html">Tác động</a></li>
+                <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
+                <li><a href="thuvien_nguon.html">Thư viện & Nguồn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-title">Hành trình và Những bước ngoặt</h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1955: Tẩy chay xe buýt Montgomery</h3>
+                    <p>Lãnh đạo cuộc biểu tình lịch sử sau vụ Rosa Parks bị bắt giữ, khẳng định sức mạnh của phong trào bất bạo động.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1963: Diễn văn "I Have a Dream"</h3>
+                    <p>Bài diễn văn chấn động trước 250.000 người tại Washington D.C, trở thành biểu tượng toàn cầu về khát vọng bình đẳng.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 Dự án Tin học 12</footer>
+    <div class="bg-music-container">
+        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
+        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    </div>
+    <script>
+        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
+        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
+        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
+    </script>
+</body>
+</html>
