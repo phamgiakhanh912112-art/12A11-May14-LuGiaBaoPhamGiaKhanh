@@ -2,15 +2,15 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Cuộc đời và Bối cảnh – Martin Luther King Jr.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuộc đời và bối cảnh của Sir Nicholas Winton</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
         <nav>
-            <ul>
+            <a href="index.html" class="logo">NICHOLAS <span>WINTON</span></a>
+            <ul class="nav-links">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="cuocdoi.html" class="active">Cuộc đời</a></li>
                 <li><a href="hanhtrinh.html">Hành trình</a></li>
@@ -24,28 +24,48 @@
     </header>
 
     <main>
-        <h1 class="section-title">Cuộc đời và Bối cảnh của Martin Luther King Jr.</h1>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Thông tin xuất thân</h3>
-                <p>Sinh ngày 15 tháng 1 năm 1929 tại Atlanta, bang Georgia, Mỹ. Ông sinh ra trong một gia đình tri thức có truyền thống tôn giáo với cha và ông nội đều là mục sư Baptist.</p>
+        <h1>Cuộc đời và bối cảnh của Sir Nicholas Winton</h1>
+        
+        <p><strong>Ngày tháng năm sinh – Mất:</strong> 19/05/1909 – 01/07/2015 (Thọ 106 tuổi).</p>
+        <p><strong>Quê quán & Nơi sinh:</strong> Hampstead, London, Vương quốc Anh.</p>
+
+        <h2>Gia đình & Tuổi thơ</h2>
+        <p>Ông sinh ra trong gia đình gốc Do Thái người Đức (họ gốc là Wertheim) di cư sang Anh. Bố mẹ ông đã cải đạo sang Kitô giáo và đổi họ thành Winton để hòa nhập vào xã hội Anh.</p>
+
+        <h2>Quá trình học tập & Sự nghiệp ban đầu</h2>
+        <p>Sau khi học xong, ông làm việc tại các ngân hàng ở Pháp và Đức, sau đó trở thành một nhà môi giới chứng khoán tại Sở Giao dịch Chứng khoán London.</p>
+
+        <h2>Bối cảnh lịch sử - xã hội</h2>
+        <ul>
+            <li>Cuối năm 1938, Đức Quốc Xã sáp nhập vùng Sudetenland của Tiệp Khắc sau Hiệp định Munich.</li>
+            <li>Hàng ngàn người tị nạn (đặc biệt là người Do Thái) phải sống trong các trại tị nạn chật chội với điều kiện khắc nghiệt tại Praha dưới mối đe dọa trực tiếp từ phát xít Đức.</li>
+            <li>Các tổ chức nhân đạo quốc tế lúc đó chủ yếu tập trung cứu giúp người trưởng thành và các nhà hoạt động chính trị, bỏ ngỏ đối tượng trẻ em.</li>
+        </ul>
+
+        <h2>Điều kiện & Yếu tố ảnh hưởng</h2>
+        <p>Sự thấu cảm sâu sắc đối với người tị nạn và tinh thần chủ động khi ông trực tiếp chứng kiến hoàn cảnh bi thảm tại Praha vào tháng 12/1938.</p>
+
+        <div class="gallery-grid" style="margin-top: 2rem;">
+            <div class="gallery-item">
+                <img src="images/images1.jpg" alt="Nicholas Winton thời trẻ bên trẻ em tị nạn">
+                <div class="gallery-caption">Hình ảnh Nicholas Winton thời trẻ ân cần chăm sóc một em nhỏ trong giai đoạn bão táp chiến tranh[cite: 21].</div>
             </div>
-            <div class="card">
-                <h3>Bối cảnh thời đại</h3>
-                <p>Trưởng thành trong giai đoạn nước Mỹ phân biệt chủng tộc nặng nề (Luật Jim Crow). Người da đen bị tước đoạt quyền bầu cử, bị phân chia không gian công cộng khắt khe.</p>
+            <div class="gallery-item">
+                <img src="images/images2.jpg" alt="Tượng đài tưởng niệm Sir Nicholas Winton">
+                <div class="gallery-caption">Tượng đài đồng vinh danh Sir Nicholas Winton tại nhà ga, nhắc nhở thế hệ sau về lòng trắc ẩn[cite: 22].</div>
             </div>
         </div>
     </main>
 
-    <footer>&copy; 2026 Dự án Tin học 12</footer>
-    <div class="bg-music-container">
-        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
-        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    <div class="audio-widget">
+        <span>🎵 Nhạc nền:</span>
+        <audio controls loop>
+            <source src="juraganvisi-light-whimsical-instrumental-with-playful-rhythms-v2-404307.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <script>
-        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
-        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
-        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
-    </script>
+
+    <footer>
+        <p>Những con người làm thay đổi thế giới</p>
+    </footer>
 </body>
 </html>
