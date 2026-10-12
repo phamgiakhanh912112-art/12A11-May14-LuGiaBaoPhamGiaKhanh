@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thư viện, Nguồn tham khảo & Phân công</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cuocdoi.html">Cuộc đời</a></li>
+                <li><a href="hanhtrinh.html">Hành trình</a></li>
+                <li><a href="thanhtuu.html">Thành tựu</a></li>
+                <li><a href="thuthach.html">Thử thách</a></li>
+                <li><a href="tacdong.html">Tác động</a></li>
+                <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
+                <li><a href="thuvien_nguon.html" class="active">Thư viện & Nguồn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-title">Thư viện Media & Phân công công việc</h1>
+        
+        <h3 style="margin-bottom: 15px; color: var(--gold);">Thư viện hình ảnh</h3>
+        <div class="gallery-grid" style="margin-bottom: 40px;">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=400&q=80" alt="Ảnh 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&q=80" alt="Ảnh 2"></div>
+        </div>
+
+        <h3 style="margin-bottom: 15px; color: var(--gold);">Bảng phân công nhiệm vụ</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thành viên</th>
+                    <th>Công việc chính</th>
+                    <th>Công việc hỗ trợ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Phạm Gia Khánh</td>
+                    <td>Thiết kế Code HTML/CSS, Trang chủ, Hành trình</td>
+                    <td>Sưu tầm hình ảnh,Làm báo cáo thuyết trình</td>
+                </tr>
+                <tr>
+                    <td>Lữ Gia Bảo</td>
+                    <td>Nội dung Cuộc đời, Thành tựu, Tác động,Nội dung Thử thách, Di sản, Thư viện & Nguồn</td>
+                    <td>Kiểm tra chính tả</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>&copy; 2026 Dự án Tin học 12</footer>
+    <div class="bg-music-container">
+        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
+        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    </div>
+    <script>
+        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
+        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
+        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
+    </script>
+</body>
+</html>
