@@ -10,7 +10,8 @@
     <header>
         <nav>
             <a href="index.html" class="logo">NICHOLAS <span>WINTON</span></a>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-btn" aria-label="Menu tổng hợp"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="cuocdoi.html">Cuộc đời</a></li>
                 <li><a href="hanhtrinh.html">Hành trình</a></li>
@@ -19,54 +20,45 @@
                 <li><a href="tacdong.html">Tác động</a></li>
                 <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
                 <li><a href="thuvien_nguon.html">Thư viện & Nguồn</a></li>
+                <li class="audio-nav-item">
+                    <span style="color: white; font-size: 0.8rem;">🎵 Nhạc:</span>
+                    <audio controls loop><source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=gentle-piano-110660.mp3" type="audio/mpeg"></audio>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>Những thành tựu làm nên tên tuổi Sir Nicholas Winton</h1>
-        <p>Những đóng góp to lớn của ông được thể hiện rõ qua các thành tựu nổi bật:</p>
-
         <div class="card-grid">
             <div class="card">
                 <h3>1. Chiến dịch "Czech Kindertransport" (1938 – 1939)</h3>
-                <p><strong>Bối cảnh:</strong> Chính phủ Anh cho phép tiếp nhận trẻ em tị nạn dưới 17 tuổi không có cha mẹ đi kèm, với điều kiện phải có người bảo lãnh £50 cho mỗi em và tìm được gia đình chăm sóc.</p>
-                <p><strong>Nội dung:</strong> Ông thành lập "Bộ phận Trẻ em" thuộc Ủy ban Người tị nạn Tiệp Khắc. Ông tự đăng báo tìm gia đình nuôi, thuyết phục Bộ Nội vụ Anh cấp visa, thu tiền thế chân và tổ chức các chuyến tàu băng qua Đức, Hà Lan để về Anh.</p>
-                <p><strong>Ý nghĩa:</strong> Giải cứu thành công 669 trẻ em thoát khỏi cái chết thảm khốc.</p>
+                <p>Giải cứu thành công 669 trẻ em thoát khỏi cái chết thảm khốc dưới tay Đức Quốc Xã.</p>
             </div>
-
             <div class="card">
-                <h3>2. Xây dựng hệ thống bảo trợ và pháp lý cho trẻ tị nạn</h3>
-                <p><strong>Bối cảnh:</strong> Thủ tục hành chính của chính quyền Anh lúc bấy giờ rất chậm chạp.</p>
-                <p><strong>Nội dung:</strong> Ông tự làm giả một số giấy tờ nhập cảnh khi thủ tục bị tắc nghẽn, đồng thời chủ động liên hệ với báo chí để kêu gọi quyên góp tài chính và sự hỗ trợ từ cộng đồng.</p>
-                <p><strong>Ý nghĩa:</strong> Tiền đề cho các mô hình vận động cứu trợ nhân đạo khẩn cấp phi chính phủ về sau.</p>
+                <h3>2. Xây dựng hệ thống bảo trợ pháp lý</h3>
+                <p>Thuyết phục chính phủ Anh cấp visa, kêu gọi quyên góp tài chính và hỗ trợ từ cộng đồng.</p>
             </div>
-
             <div class="card">
-                <h3>3. Cống hiến cho các hoạt động từ thiện cộng đồng (1945 – 1980s)</h3>
-                <p><strong>Bối cảnh:</strong> Giai đoạn hậu Thế chiến II khi xã hội Anh cần tái thiết và chăm sóc các nhóm yếu thế.</p>
-                <p><strong>Nội dung:</strong> Ông tiếp tục tham gia Tổ chức Người tị nạn Quốc tế (IRO), giúp xây dựng các ngôi nhà hỗ trợ người già và người khuyết tật tại Maidenhead (Anh).</p>
-                <p><strong>Ý nghĩa:</strong> Chứng minh tinh thần phụng sự cộng đồng là lý tưởng suốt đời.</p>
+                <h3>3. Cống hiến từ thiện hậu chiến</h3>
+                <p>Tham gia Tổ chức Người tị nạn Quốc tế (IRO), xây dựng nhà hỗ trợ người già và người khuyết tật.</p>
             </div>
         </div>
 
+        <!-- 1 hình ảnh minh họa cho trang 4 -->
         <div style="margin-top: 2.5rem; text-align: center;">
             <div style="max-width: 500px; margin: 0 auto;" class="gallery-item">
-                <img src="images/105 tuổi nhận huân chương sư tử trắng tại choa sec.webp" alt="Nicholas Winton nhận Huân chương Sư tử Trắng">
-                <div class="gallery-caption">Khoảnh khắc Sir Nicholas Winton ở tuổi 105 vinh dự đón nhận Huân chương Sư tử trắng – phần thưởng cao quý nhất của Cộng hòa Séc[cite: 23].</div>
+                <img src="images/huanchuong.webp" alt="Nhận Huân chương Sư tử Trắng">
+                <div class="gallery-caption">Sir Nicholas Winton nhận Huân chương Sư tử Trắng ở tuổi 105[cite: 23].</div>
             </div>
         </div>
     </main>
 
-    <div class="audio-widget">
-        <span>🎵 Nhạc nền:</span>
-        <audio controls loop>
-            <source src="juraganvisi-light-whimsical-instrumental-with-playful-rhythms-v2-404307.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <footer>
-        <p>Những con người làm thay đổi thế giới</p>
-    </footer>
+    <footer><p>Những con người làm thay đổi thế giới</p></footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
 </body>
 </html>
