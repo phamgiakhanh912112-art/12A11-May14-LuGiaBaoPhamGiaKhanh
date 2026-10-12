@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tác động thay đổi thế giới – Martin Luther King Jr.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cuocdoi.html">Cuộc đời</a></li>
+                <li><a href="hanhtrinh.html">Hành trình</a></li>
+                <li><a href="thanhtuu.html">Thành tựu</a></li>
+                <li><a href="thuthach.html">Thử thách</a></li>
+                <li><a href="tacdong.html" class="active">Tác động</a></li>
+                <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
+                <li><a href="thuvien_nguon.html">Thư viện & Nguồn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-title">Martin Luther King Jr. đã thay đổi thế giới như thế nào?</h1>
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>Sự chuyển biến cấu trúc xã hội toàn cầu</h3>
+            <p>Những đóng góp của ông đã phá vỡ bức tường phân biệt chủng tộc tại Mỹ, truyền cảm hứng cho các phong trào đấu tranh nhân quyền trên toàn cầu, thúc đẩy quyền tự do của các nhóm thiểu số ở nhiều quốc gia khác.</p>
+        </div>
+        <div class="card" style="border-color: var(--gold);">
+            <h3>Phân tích chuyên sâu: Nếu không có ông, thế giới sẽ ra sao?</h3>
+            <p style="color: var(--text-muted); font-style: italic;">
+                "Nếu không có sự dẫn dắt của Martin Luther King Jr., phong trào dân quyền tại Mỹ có thể đã chìm trong bạo lực đẫm máu thay vì đi theo con đường bất bạo động đầy nhân văn. Sự thay đổi pháp lý về quyền bình đẳng có thể đã bị trì hoãn nhiều thập kỷ, và khát vọng về một xã hội hòa hợp sẽ thiếu đi tiếng nói truyền cảm hứng mạnh mẽ nhất, khiến nhân loại mất đi một biểu tượng sáng ngời về lòng trắc ẩn và sự công bằng."
+            </p>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 Dự án Tin học 12</footer>
+    <div class="bg-music-container">
+        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
+        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    </div>
+    <script>
+        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
+        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
+        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
+    </script>
+</body>
+</html>
