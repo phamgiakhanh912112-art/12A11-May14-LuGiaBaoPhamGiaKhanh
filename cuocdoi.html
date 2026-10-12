@@ -10,7 +10,8 @@
     <header>
         <nav>
             <a href="index.html" class="logo">NICHOLAS <span>WINTON</span></a>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-btn" aria-label="Menu tổng hợp"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="cuocdoi.html" class="active">Cuộc đời</a></li>
                 <li><a href="hanhtrinh.html">Hành trình</a></li>
@@ -19,13 +20,16 @@
                 <li><a href="tacdong.html">Tác động</a></li>
                 <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
                 <li><a href="thuvien_nguon.html">Thư viện & Nguồn</a></li>
+                <li class="audio-nav-item">
+                    <span style="color: white; font-size: 0.8rem;">🎵 Nhạc:</span>
+                    <audio controls loop><source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=gentle-piano-110660.mp3" type="audio/mpeg"></audio>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>Cuộc đời và bối cảnh của Sir Nicholas Winton</h1>
-        
         <p><strong>Ngày tháng năm sinh – Mất:</strong> 19/05/1909 – 01/07/2015 (Thọ 106 tuổi).</p>
         <p><strong>Quê quán & Nơi sinh:</strong> Hampstead, London, Vương quốc Anh.</p>
 
@@ -38,34 +42,27 @@
         <h2>Bối cảnh lịch sử - xã hội</h2>
         <ul>
             <li>Cuối năm 1938, Đức Quốc Xã sáp nhập vùng Sudetenland của Tiệp Khắc sau Hiệp định Munich.</li>
-            <li>Hàng ngàn người tị nạn (đặc biệt là người Do Thái) phải sống trong các trại tị nạn chật chội với điều kiện khắc nghiệt tại Praha dưới mối đe dọa trực tiếp từ phát xít Đức.</li>
-            <li>Các tổ chức nhân đạo quốc tế lúc đó chủ yếu tập trung cứu giúp người trưởng thành và các nhà hoạt động chính trị, bỏ ngỏ đối tượng trẻ em.</li>
+            <li>Hàng ngàn người tị nạn phải sống trong các trại tị nạn chật chội với điều kiện khắc nghiệt tại Praha dưới mối đe dọa trực tiếp từ phát xít Đức.</li>
         </ul>
 
-        <h2>Điều kiện & Yếu tố ảnh hưởng</h2>
-        <p>Sự thấu cảm sâu sắc đối với người tị nạn và tinh thần chủ động khi ông trực tiếp chứng kiến hoàn cảnh bi thảm tại Praha vào tháng 12/1938.</p>
-
+        <!-- 2 hình ảnh minh họa cho trang 2 -->
         <div class="gallery-grid" style="margin-top: 2rem;">
             <div class="gallery-item">
-                <img src="images/images1.jpg" alt="Nicholas Winton thời trẻ bên trẻ em tị nạn">
-                <div class="gallery-caption">Hình ảnh Nicholas Winton thời trẻ ân cần chăm sóc một em nhỏ trong giai đoạn bão táp chiến tranh[cite: 21].</div>
+                <img src="images/images1.jpg" alt="Nicholas Winton thời trẻ">
+                <div class="gallery-caption">Hình ảnh Nicholas Winton thời trẻ ân cần chăm sóc trẻ em tị nạn[cite: 21].</div>
             </div>
             <div class="gallery-item">
-                <img src="images/images2.jpg" alt="Tượng đài tưởng niệm Sir Nicholas Winton">
-                <div class="gallery-caption">Tượng đài đồng vinh danh Sir Nicholas Winton tại nhà ga, nhắc nhở thế hệ sau về lòng trắc ẩn[cite: 22].</div>
+                <img src="images/images2.jpg" alt="Tượng đài tưởng niệm">
+                <div class="gallery-caption">Tượng đài đồng vinh danh Sir Nicholas Winton tại nhà ga[cite: 22].</div>
             </div>
         </div>
     </main>
 
-    <div class="audio-widget">
-        <span>🎵 Nhạc nền:</span>
-        <audio controls loop>
-            <source src="juraganvisi-light-whimsical-instrumental-with-playful-rhythms-v2-404307.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <footer>
-        <p>Những con người làm thay đổi thế giới</p>
-    </footer>
+    <footer><p>Những con người làm thay đổi thế giới</p></footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
 </body>
 </html>
