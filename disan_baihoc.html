@@ -2,15 +2,15 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Di sản và Bài học – Martin Luther King Jr.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di sản và bài học từ Sir Nicholas Winton</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">Dự Án Nhân Quyền</a>
         <nav>
-            <ul>
+            <a href="index.html" class="logo">NICHOLAS <span>WINTON</span></a>
+            <ul class="nav-links">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="cuocdoi.html">Cuộc đời</a></li>
                 <li><a href="hanhtrinh.html">Hành trình</a></li>
@@ -24,28 +24,52 @@
     </header>
 
     <main>
-        <h1 class="section-title">Di sản và Cảm nhận cá nhân</h1>
+        <h1>Di sản và bài học từ Sir Nicholas Winton</h1>
+
+        <h2>Di sản còn lại</h2>
+        <ul>
+            <li>Tượng đài Sir Nicholas Winton tại Ga đường sắt chính ở Praha (Cộng hòa Séc) và Ga Liverpool Street (London, Anh).</li>
+            <li>Bộ phim điện ảnh nổi tiếng <em>One Life</em> (2023) tái hiện lại cuộc đời ông.</li>
+        </ul>
+
+        <h2>Bài học cho học sinh</h2>
+        <ol>
+            <li><strong>Lòng nhân ái đích thực:</strong> Làm việc tốt xuất phát từ cái tâm, không phụ thuộc vào sự ghi nhận hay khen thưởng của người khác.</li>
+            <li><strong>Thái độ trước khó khăn:</strong> Đừng nhìn thử thách như một bức tường ngăn cản, hãy tìm giải pháp để vượt qua.</li>
+            <li><strong>Trách nhiệm với cộng đồng:</strong> Sự thờ ơ là mối đe dọa lớn nhất đối với xã hội.</li>
+        </ol>
+
+        <h2>Cảm nhận cá nhân của các thành viên nhóm</h2>
         <div class="card-grid">
             <div class="card">
-                <h3>Di sản để lại</h3>
-                <p>Ngày lễ Martin Luther King Jr. Day được tổ chức thường niên tại Mỹ để tưởng nhớ giá trị về hòa bình, sự bình đẳng và tình đoàn kết nhân loại.</p>
+                <h3>Thành viên 1</h3>
+                <p>Ấn tượng nhất là chi tiết ông giữ bí mật suốt 50 năm, không hề kể cho vợ hay con cái nghe. Sự khiêm nhường đó thật vĩ đại.</p>
             </div>
             <div class="card">
-                <h3>Cảm nhận từ thành viên nhóm</h3>
-                <p><strong>Thành viên 1:</strong> Ấn tượng nhất với tinh thần dũng cảm và cách ông dùng tri thức, ngôn từ nhân văn để thay đổi định kiến xã hội.</p>
+                <h3>Thành viên 2</h3>
+                <p>Học được bài học về tư duy giải quyết vấn đề. Khi đứng trước các quy định khắt khe về visa hay tiền bảo chứng, ông không bỏ cuộc mà tìm mọi cách hợp pháp lẫn linh hoạt để giải quyết.</p>
             </div>
+            <div class="card">
+                <h3>Thành viên 3</h3>
+                <p>Cảm động nhất trước khoảnh khắc trên chương trình BBC năm 1988 khi tất cả những người xung quanh ông đồng loạt đứng dậy tri ân.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; background: #f1f5f9; padding: 1.5rem; border-radius: 8px;">
+            <h2>Thông điệp kết trang</h2>
+            <p><em>"Đối với thế hệ trẻ hôm nay, di sản của ông là lời nhắc nhở rằng chúng ta không bao giờ quá trẻ hoặc quá nhỏ bé để tạo ra sự thay đổi tích cực cho xã hội."</em></p>
         </div>
     </main>
 
-    <footer>&copy; 2026 Dự án Tin học 12</footer>
-    <div class="bg-music-container">
-        <audio id="bg-audio" loop><source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg"></audio>
-        <button id="music-toggle-btn" class="bg-music-btn" onclick="toggleMusic()"><span id="music-icon">🔇</span> <span id="music-text">Bật nhạc nền</span></button>
+    <div class="audio-widget">
+        <span>🎵 Nhạc nền:</span>
+        <audio controls loop>
+            <source src="juraganvisi-light-whimsical-instrumental-with-playful-rhythms-v2-404307.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <script>
-        const audio = document.getElementById('bg-audio'), musicIcon = document.getElementById('music-icon'), musicText = document.getElementById('music-text');
-        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('bgMusicPlaying') === 'true') { audio.play().then(()=>{musicIcon.textContent='🔊';musicText.textContent='Tắt nhạc nền';}).catch(e=>{}); } });
-        function toggleMusic() { if (audio.paused) { audio.play(); musicIcon.textContent='🔊'; musicText.textContent='Tắt nhạc nền'; localStorage.setItem('bgMusicPlaying','true'); } else { audio.pause(); musicIcon.textContent='🔇'; musicText.textContent='Bật nhạc nền'; localStorage.setItem('bgMusicPlaying','false'); } }
-    </script>
+
+    <footer>
+        <p>Những con người làm thay đổi thế giới</p>
+    </footer>
 </body>
 </html>
