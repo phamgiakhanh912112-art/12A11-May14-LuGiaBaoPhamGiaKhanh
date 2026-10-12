@@ -10,7 +10,8 @@
     <header>
         <nav>
             <a href="index.html" class="logo">NICHOLAS <span>WINTON</span></a>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menu-btn" aria-label="Menu tổng hợp"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="cuocdoi.html">Cuộc đời</a></li>
                 <li><a href="hanhtrinh.html">Hành trình</a></li>
@@ -19,6 +20,10 @@
                 <li><a href="tacdong.html">Tác động</a></li>
                 <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
                 <li><a href="thuvien_nguon.html" class="active">Thư viện & Nguồn</a></li>
+                <li class="audio-nav-item">
+                    <span style="color: white; font-size: 0.8rem;">🎵 Nhạc:</span>
+                    <audio controls loop><source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=gentle-piano-110660.mp3" type="audio/mpeg"></audio>
+                </li>
             </ul>
         </nav>
     </header>
@@ -28,38 +33,14 @@
 
         <h2>Phần 1: Thư viện hình ảnh (8 ảnh minh họa)</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/anhl.jpg" alt="Chân dung Sir Nicholas Winton">
-                <div class="gallery-caption">Chân dung trang trọng của Sir Nicholas Winton[cite: 19].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/106472077_10221734778134406_8487468751687032700_n.jpg" alt="Nicholas Winton trong trang phục lịch lãm">
-                <div class="gallery-caption">Ông trong những năm tháng tuổi già với nụ cười hiền hậu[cite: 19].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/gettyimages-828634688-612x612.jpg" alt="Khoảnh khắc vinh danh">
-                <div class="gallery-caption">Hình ảnh ông nâng niu huân chương danh dự[cite: 20].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/images1.jpg" alt="Ảnh tư liệu lịch sử Kindertransport">
-                <div class="gallery-caption">Khoảnh khắc xúc động bên đứa trẻ được cứu sống[cite: 21].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/images2.jpg" alt="Tượng đài tại nhà ga">
-                <div class="gallery-caption">Tượng đài đồng tái hiện hình ảnh cứu sinh tại sân ga[cite: 22].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/105 tuổi nhận huân chương sư tử trắng tại choa sec.webp" alt="Nhận Huân chương Sư tử Trắng">
-                <div class="gallery-caption">Nhận Huân chương Sư tử Trắng tại Séc[cite: 23].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/1791820050319_541419633214886560_8096326347167186296_0d9423a18c6c512a9352e3bc61aaf258.jpg" alt="Đoàn tàu tưởng niệm Winton Train">
-                <div class="gallery-caption">Chuyến tàu tưởng niệm hành trình lịch sử[cite: 24].</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/images3.webp" alt="Poster phim Nicky's Family">
-                <div class="gallery-caption">Poster phim tài liệu tái hiện câu chuyện cảm động[cite: 25].</div>
-            </div>
+            <div class="gallery-item"><img src="images/anhl.jpg" alt="Ảnh 1"><div class="gallery-caption">Chân dung Sir Nicholas Winton[cite: 19].</div></div>
+            <div class="gallery-item"><img src="images/106472077_10221734778134406_8487468751687032700_n.jpg" alt="Ảnh 2"><div class="gallery-caption">Tuổi già hiền hậu[cite: 19].</div></div>
+            <div class="gallery-item"><img src="images/gettyimages-828634688-612x612.jpg" alt="Ảnh 3"><div class="gallery-caption">Nâng niu huân chương danh dự[cite: 20].</div></div>
+            <div class="gallery-item"><img src="images/images1.jpg" alt="Ảnh 4"><div class="gallery-caption">Bên trẻ em tị nạn[cite: 21].</div></div>
+            <div class="gallery-item"><img src="images/images2.jpg" alt="Ảnh 5"><div class="gallery-caption">Tượng đài đồng tại ga tàu[cite: 22].</div></div>
+            <div class="gallery-item"><img src="images/huanchuong.webp" alt="Ảnh 6"><div class="gallery-caption">Nhận Huân chương Sư tử Trắng[cite: 23].</div></div>
+            <div class="gallery-item"><img src="images/1791820050319_541419633214886560_8096326347167186296_0d9423a18c6c512a9352e3bc61aaf258.jpg" alt="Ảnh 7"><div class="gallery-caption">Chuyến tàu tưởng niệm[cite: 24].</div></div>
+            <div class="gallery-item"><img src="images/images3.webp" alt="Ảnh 8"><div class="gallery-caption">Poster phim tài liệu[cite: 25].</div></div>
         </div>
 
         <h2>Video tư liệu (YouTube Shorts)</h2>
@@ -69,11 +50,11 @@
 
         <h2>Phần 2: Nguồn tham khảo uy tín</h2>
         <ul>
-            <li><strong>Bảo tàng Lịch sử Thảm họa Do Thái Hoa Kỳ (USHMM):</strong> Tài liệu lưu trữ lịch sử về Kindertransport - <a href="https://www.ushmm.org" target="_blank">https://www.ushmm.org</a></li>
-            <li><strong>BBC News:</strong> Bài viết tiểu sử và thông tin chi tiết về Sir Nicholas Winton - <a href="https://www.bbc.com" target="_blank">https://www.bbc.com</a></li>
-            <li><strong>The Guardian:</strong> Các bài báo cáo và hồi ức về cuộc đời vĩ đại của ông - <a href="https://www.theguardian.com" target="_blank">https://www.theguardian.com</a></li>
-            <li><strong>Royal.uk:</strong> Trang thông tin chính thức của Hoàng gia Anh về các tước hiệu hiệp sĩ - <a href="https://www.royal.uk" target="_blank">https://www.royal.uk</a></li>
-            <li><strong>Holocaust Memorial Day Trust:</strong> Tư liệu giáo dục nhân đạo quốc tế - <a href="https://hmd.org.uk" target="_blank">https://hmd.org.uk</a></li>
+            <li><strong>Bảo tàng Lịch sử Thảm họa Do Thái Hoa Kỳ (USHMM):</strong> <a href="https://www.ushmm.org" target="_blank">https://www.ushmm.org</a></li>
+            <li><strong>BBC News:</strong> <a href="https://www.bbc.com" target="_blank">https://www.bbc.com</a></li>
+            <li><strong>The Guardian:</strong> <a href="https://www.theguardian.com" target="_blank">https://www.theguardian.com</a></li>
+            <li><strong>Royal.uk:</strong> <a href="https://www.royal.uk" target="_blank">https://www.royal.uk</a></li>
+            <li><strong>Holocaust Memorial Day Trust:</strong> <a href="https://hmd.org.uk" target="_blank">https://hmd.org.uk</a></li>
         </ul>
 
         <h2>Phần 3: Bảng phân công nhiệm vụ</h2>
@@ -88,29 +69,23 @@
             <tbody>
                 <tr>
                     <td>Phạm Gia Khánh</td>
-                    <td>Xây dựng cấu trúc mã HTML, thiết kế tệp CSS chung và trang Trọng tâm tác động</td>
-                    <td>Sưu tầm hình ảnh, kiểm tra liên kết trang và nhạc nền</td>
-                    <td>Soạn thảo nội dung trang Thành tựu, Di sản và viết cảm nhận cá nhân</td>
+                    <td>Xây dựng mã HTML, thiết kế tệp CSS chung và trang Trọng tâm tác động</td>
+                    <td>Sưu tầm hình ảnh, kiểm tra liên kết trang và cấu hình nhạc nền</td>
                 </tr>
                 <tr>
                     <td>Lữ Gia Bảo</td>
-                    <td>Soạn thảo nội dung chi tiết trang Cuộc đời, Hành trình và Thử thách</td>
-                    <td>Tìm kiếm nguồn tham khảo và kiểm chứng thông tin lịch sử</td>
-                    <td>Nhúng video YouTube Shorts, kiểm tra chính tả toàn bài</td>
+                    <td>Soạn nội dung trang Cuộc đời, Hành trình, Thử thách và Thành tựu</td>
+                    <td>Tìm kiếm nguồn tham khảo, kiểm chứng thông tin và nhúng video YouTube</td>
                 </tr>
             </tbody>
         </table>
     </main>
 
-    <div class="audio-widget">
-        <span>🎵 Nhạc nền:</span>
-        <audio controls loop>
-            <source src="juraganvisi-light-whimsical-instrumental-with-playful-rhythms-v2-404307.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <footer>
-        <p>Những con người làm thay đổi thế giới</p>
-    </footer>
+    <footer><p>Những con người làm thay đổi thế giới</p></footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+    </script>
 </body>
 </html>
